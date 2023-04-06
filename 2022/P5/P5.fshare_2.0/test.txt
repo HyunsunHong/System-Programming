@@ -1,0 +1,84 @@
+fshare_server start(portnum: 8030)
+fshare_client start(ip:127.0.0.1, portnum: 8030)
+fshare_client start(ip:127.0.0.1, portnum: 8030)
+fshare_client start(ip:127.0.0.1, portnum: 8030)
+cleint : inotify_thread detected! IN_MOVED_FROM , c.txt
+send_thread(debug). file c.txt, option 1
+client: recv_thread got broadcasted msg. file : c.txt, option : 1
+client: recv_thread got broadcasted msg. file : c.txt, option : 1
+cleint : inotify_thread detected! IN_CLOSE_WRITE , d.txt
+send_thread(debug). file d.txt, option 0
+client: recv_thread got broadcasted msg. file : e.txt, option : 0
+fshare_client stop(ip:127.0.0.1, portnum: 8030)
+server: on
+server: 4 is now connected!, file matching start
+server: 4  file matching end
+server: got msg from 4, option 0, filename move.txt, filenamelen 8
+server: 5 is now connected!, file matching start
+server: file matching broadcasting. from: 5, to : 4, file : b.txt, option, 0 
+server: 5  file matching end
+server: got msg from 5, option 1, filename b.txt, filenamelen 5
+server: file broadcasting. from: 5, to : 4, file : b.txt, option, 1 
+server: got msg from 5, option 0, filename bb.txt, filenamelen 6
+server: file broadcasting. from: 5, to : 4, file : bb.txt, option, 0 
+server: got msg from 4, option 1, filename b.txt, filenamelen 5
+server: file broadcasting. from: 4, to : 5, file : b.txt, option, 1 
+server: got msg from 5, option 1, filename bb.txt, filenamelen 6
+server: file broadcasting. from: 5, to : 4, file : bb.txt, option, 1 
+server: got msg from 4, option 1, filename bb.txt, filenamelen 6
+server: file broadcasting. from: 4, to : 5, file : bb.txt, option, 1 
+server: 7 is now connected!, file matching start
+server: file matching broadcasting. from: 7, to : 5, file : c.txt, option, 0 
+server: file matching broadcasting. from: 7, to : 4, file : c.txt, option, 0 
+server: 7  file matching end
+server: got msg from 7, option 1, filename c.txt, filenamelen 5
+server: file broadcasting. from: 7, to : 5, file : c.txt, option, 1 
+server: file broadcasting. from: 7, to : 4, file : c.txt, option, 1 
+server: got msg from 4, option 1, filename c.txt, filenamelen 5
+server: got msg from 5, option 1, filename c.txt, filenamelen 5
+server: file broadcasting. from: 4, to : 7, file : c.txt, option, 1 
+server: file broadcasting. from: 4, to : 5, file : c.txt, option, 1 
+server: file broadcasting. from: 5, to : 7, file : c.txt, option, 1 
+server: file broadcasting. from: 5, to : 4, file : c.txt, option, 1 
+server: got msg from 7, option 0, filename d.txt, filenamelen 5
+server: file broadcasting. from: 7, to : 5, file : d.txt, option, 0 
+server: file broadcasting. from: 7, to : 4, file : d.txt, option, 0 
+server: got msg from 5, option 0, filename e.txt, filenamelen 5
+server: file broadcasting. from: 5, to : 7, file : e.txt, option, 0 
+server: file broadcasting. from: 5, to : 4, file : e.txt, option, 0 
+fshare_server stop(portnum: 8030)
+cleint : inotify_thread detected! IN_MOVED_FROM , b.txt
+cleint : inotify_thread detected! IN_MOVED_TO , bb.txt
+send_thread(debug). file b.txt, option 1
+send_thread(debug). file bb.txt, option 0
+client: recv_thread got broadcasted msg. file : b.txt, option : 1
+cleint : inotify_thread detected! IN_DELETE , bb.txt
+send_thread(debug). file bb.txt, option 1
+client: recv_thread got broadcasted msg. file : bb.txt, option : 1
+client: recv_thread got broadcasted msg. file : c.txt, option : 0
+client: recv_thread got broadcasted msg. file : c.txt, option : 1
+cleint : inotify_thread detected! IN_DELETE , c.txt
+send_thread(debug). file c.txt, option 1
+client: recv_thread got broadcasted msg. file : c.txt, option : 1
+client: recv_thread got broadcasted msg. file : d.txt, option : 0
+cleint : inotify_thread detected! IN_CLOSE_WRITE , e.txt
+send_thread(debug). file e.txt, option 0
+fshare_client stop(ip:127.0.0.1, portnum: 8030)
+cleint : inotify_thread detected! IN_MOVED_TO , move.txt
+send_thread(debug). file move.txt, option 0
+client: recv_thread got broadcasted msg. file : b.txt, option : 0
+client: recv_thread got broadcasted msg. file : b.txt, option : 1
+client: recv_thread got broadcasted msg. file : bb.txt, option : 0
+cleint : inotify_thread detected! IN_DELETE , b.txt
+send_thread(debug). file b.txt, option 1
+client: recv_thread got broadcasted msg. file : bb.txt, option : 1
+cleint : inotify_thread detected! IN_DELETE , bb.txt
+send_thread(debug). file bb.txt, option 1
+client: recv_thread got broadcasted msg. file : c.txt, option : 0
+client: recv_thread got broadcasted msg. file : c.txt, option : 1
+cleint : inotify_thread detected! IN_DELETE , c.txt
+send_thread(debug). file c.txt, option 1
+client: recv_thread got broadcasted msg. file : c.txt, option : 1
+client: recv_thread got broadcasted msg. file : d.txt, option : 0
+client: recv_thread got broadcasted msg. file : e.txt, option : 0
+fshare_client stop(ip:127.0.0.1, portnum: 8030)
